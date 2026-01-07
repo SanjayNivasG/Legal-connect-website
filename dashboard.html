@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Online Court System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #2c3e50;
+    color: white;
+    position: fixed;
+    padding-top: 20px;
+    overflow-y: auto;  /* Allows scrolling */
+}
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 15px;
+            text-align: center;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar ul li a:hover {
+            background: #1a252f;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .header {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .home-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="viewcase.html">View Cases</a></li>
+            <li><a href="uphear.html">Upcoming Hearings</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="caseman.html">Case Management</a></li>
+            <li><a href="efile.html">E-Filing</a></li>
+            <li><a href="vir.html">Virtual Courtroom</a></li>
+            <li><a href="hearing.html">Hearing Schedule</a></li>
+            <li><a href="lf.html">Legal Form</a></li>
+            <li><a href="judorder.html">Judgment and Orders</a></li>
+            <li><a href="messagenot.html">Messaging Notifications</a></li>
+            <li><a href="adminpanel.html">Admin Panel</a></li>
+            <li><a href="hs.html">Help & Supportl</a></li>
+            <li><a href="home.html">Logout</a></li>
+            
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">Welcome to Your Dashboard</div>
+        <div class="content">
+            <div class="card">
+                <h3>My Cases</h3>
+                <p>View and manage your legal cases. Track case progress, view case details, and access court documents.</p>
+                <a href="view_cases.html">Go to View Cases</a>
+            </div>
+            <div class="card">
+                <h3>Upcoming Hearings</h3>
+                <p>Stay updated on your upcoming hearings. View hearing dates, assigned judges, and case status.</p>
+            </div>
+            <div class="card">
+                <h3>Notifications</h3>
+                <p>Check your latest updates and legal notices. Receive important case-related alerts and system notifications.</p>
+            </div>
+            <div class="card">
+                <h3>Profile</h3>
+                <p>Manage your account information. Update personal details, change password, and configure preferences.</p>
+            </div>
+            <div class="card">
+                <h3>Logout</h3>
+                <p>Securely log out of your account to protect your data and privacy.</p>
+            </div>
+            <a href="index.html" class="home-link">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

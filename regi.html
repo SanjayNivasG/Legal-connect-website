@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <style>
+        body{
+            font-family: Arial;
+            background:#f4f4f9;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+        .box{
+            background:white;
+            padding:30px;
+            width:350px;
+            border-radius:10px;
+            box-shadow:0 4px 8px rgba(0,0,0,0.1);
+            text-align:center;
+        }
+        input,button{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+        }
+        button{
+            background:#2c3e50;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+    </style>
+
+    <script>
+        function validateRegister(){
+            let u=document.getElementById("username").value.trim();
+            let p=document.getElementById("password").value.trim();
+            let c=document.getElementById("cpassword").value.trim();
+
+            if(u==""||p==""||c==""){
+                alert("All fields required");
+                return false;
+            }
+            if(p.length<6){
+                alert("Password minimum 6 chars");
+                return false;
+            }
+            if(p!==c){
+                alert("Password mismatch");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<div class="box">
+    <h2>Register</h2>
+    <form action="regi.php" method="POST" onsubmit="return validateRegister()">
+        <input type="text" name="username" id="username" placeholder="Username">
+        <input type="password" name="password" id="password" placeholder="Password">
+        <input type="password" id="cpassword" placeholder="Confirm Password">
+        <button type="submit">Register</button>
+    </form>
+    <a href="login.html">Already have account? Login</a>
+</div>
+
+</body>
+</html>

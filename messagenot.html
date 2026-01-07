@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaging & Notifications - Online Court</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #2c3e50;
+            color: white;
+            position: fixed;
+            padding-top: 20px;
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 15px;
+            text-align: center;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar ul li a:hover {
+            background: #1a252f;
+        }
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .header {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .message-box {
+            width: 90%;
+            padding: 10px;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #1a252f;
+        }
+        .notifications {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .notification-item {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        a {
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+        .chat-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eef1f7;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .chat-bubble {
+            padding: 10px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 10px;
+            margin: 10px 0;
+            width: fit-content;
+        }
+        .incoming {
+            background: #1a252f;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="e_filing.html">E-Filing System</a></li>
+            <li><a href="view_cases.html">View Cases</a></li>
+            <li><a href="hearing_schedule.html">Hearing Schedule</a></li>
+            <li><a href="legal_forms.html">Legal Forms & Templates</a></li>
+            <li><a href="#" class="active">Messaging & Notifications</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">Messaging & Notifications</div>
+        <div class="container">
+            <h2>Send a Secure Message</h2>
+            <textarea class="message-box" placeholder="Type your message here..."></textarea>
+            <button type="submit">Send</button>
+        </div>
+        <div class="container">
+            <h2>Live Chat</h2>
+            <div class="chat-section">
+                <div class="chat-bubble">Hello! How can I assist you today?</div>
+                <div class="chat-bubble incoming">I need help with my case filing.</div>
+            </div>
+        </div>
+        <div class="container">
+            <h2>Notifications</h2>
+            <div class="notifications">
+                <div class="notification-item">You have a new message from Judge Smith.</div>
+                <div class="notification-item">Case #1234: Hearing scheduled for March 10.</div>
+                <div class="notification-item">Document submission deadline is March 15.</div>
+            </div>
+        </div>
+        <a href="dashboard.html">Back to Dashboard</a>
+    </div>
+</body>
+</html>

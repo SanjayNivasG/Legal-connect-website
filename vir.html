@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Courtroom - Online Court</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #2c3e50;
+            color: white;
+            position: fixed;
+            padding-top: 20px;
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 15px;
+            text-align: center;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar ul li a:hover {
+            background: #1a252f;
+        }
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .header {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .video-section {
+            margin-top: 20px;
+        }
+        .video-container {
+            width: 100%;
+            height: 400px;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #1a252f;
+        }
+        a {
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="e_filing.html">E-Filing System</a></li>
+            <li><a href="view_cases.html">View Cases</a></li>
+            <li><a href="upcoming_hearings.html">Upcoming Hearings</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="#" class="active">Virtual Courtroom</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">Virtual Courtroom</div>
+        <div class="container">
+            <h2>Live Court Session</h2>
+            <div class="video-section">
+                <div class="video-container">Video Stream Here</div>
+            </div>
+            <button onclick="startSession()">Join Hearing</button>
+        </div>
+        <a href="dashboard.html">Back to Dashboard</a>
+    </div>
+
+    <script>
+        function startSession() {
+            alert("Redirecting to virtual court session...");
+            // Here, integrate video conferencing API like Zoom, WebRTC, Jitsi, etc.
+        }
+    </script>
+</body>
+</html>

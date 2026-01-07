@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Management - Online Court System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #2c3e50;
+            color: white;
+            position: fixed;
+            padding-top: 20px;
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 15px;
+            text-align: center;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar ul li a:hover {
+            background: #1a252f;
+        }
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .header {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .case-form, .case-list {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        input, textarea, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #1a252f;
+        }
+        a {
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="#" class="active">Case Management</a></li>
+            <li><a href="viewcase.html">View Cases</a></li>
+            <li><a href="uphear.html">Upcoming Hearings</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="home.html">Logout</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">Case Management</div>
+        <div class="container">
+            <div class="case-form">
+                <h3>File a New Case</h3>
+                <form>
+                    <input type="text" id="caseTitle" placeholder="Case Title" required>
+                    <textarea id="caseDescription" placeholder="Case Description" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="case-list">
+                <h3>Case History</h3>
+                <ul id="caseHistory">
+                    <li>No cases filed yet.</li>
+                </ul>
+            </div>
+        </div>
+        <a href="dashboard.html">Back to Dashboard</a>
+    </div>
+</body>
+</html>

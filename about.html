@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Online Court System</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <style>
+        :root {
+            --primary: #2A3E5A;
+            --secondary: #4A6DA8;
+            --accent: #FFC107;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: #f8f9ff;
+            color: var(--primary);
+            overflow-x: hidden;
+        }
+
+        .decorative-bg {
+            position: absolute;
+            width: 100vw;
+            height: 60vh;
+            background: var(--gradient);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+            z-index: -1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .lead-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #4a5568;
+            max-width: 800px;
+            margin: 2rem auto;
+            position: relative;
+            padding-left: 2rem;
+            border-left: 3px solid var(--accent);
+        }
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin: 4rem 0;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: var(--gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .team-member:hover::before {
+            opacity: 0.1;
+        }
+
+        .team-member img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover img {
+            transform: scale(1.05);
+        }
+
+        .team-member h3 {
+            font-size: 1.4rem;
+            margin: 1rem 0 0.5rem;
+            color: var(--primary);
+        }
+
+        .team-member p {
+            color: #718096;
+            font-weight: 500;
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 1rem 2.5rem;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(42, 62, 90, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(42, 62, 90, 0.3);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            transform: scale(0.9);
+            opacity: 0;
+            animation: modalOpen 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes modalOpen {
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 40px auto;
+                padding: 2rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="decorative-bg"></div>
+    
+    <div class="container" data-aos="fade-up">
+        <h1>Digital Justice Reinvented</h1>
+        
+        <p class="lead-text">
+            Pioneering the future of legal technology, our platform combines cutting-edge security with intuitive design to deliver a seamless judicial experience. We're transforming traditional court processes into modern digital solutions that prioritize accessibility, transparency, and efficiency.
+        </p>
+
+        <div class="team">
+            <div class="team-member" data-aos="zoom-in">
+                <img src="team1.jpg" alt="John Doe">
+                <h3>John Doe</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member" data-aos="zoom-in" data-aos-delay="100">
+                <img src="team2.jpg" alt="Jane Smith">
+                <h3>Jane Smith</h3>
+                <p>Legal Architect</p>
+            </div>
+            <div class="team-member" data-aos="zoom-in" data-aos-delay="200">
+                <img src="team3.jpg" alt="Michael Johnson">
+                <h3>Michael Johnson</h3>
+                <p>Tech Innovator</p>
+            </div>
+        </div>
+
+        <div class="contact-section" data-aos="fade-up">
+            <h2>Shape the Future of Justice With Us</h2>
+            <a href="contact.html" class="cta-button">
+                Connect With Experts
+            </a>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out-quad'
+        });
+    </script>
+</body>
+</html>

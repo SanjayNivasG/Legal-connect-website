@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - Online Court</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .faq {
+            margin-bottom: 20px;
+        }
+        .faq h3 {
+            cursor: pointer;
+            background: #2c3e50;
+            color: white;
+            padding: 12px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .faq h3:hover {
+            background: #1a252f;
+        }
+        .faq p {
+            display: none;
+            padding: 10px;
+            background: #ecf0f1;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .contact-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background: #2c3e50;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #1a252f;
+        }
+        .live-chat {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .live-chat a {
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .live-chat a:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Help & Support</h1>
+        <div class="faq">
+            <h3 onclick="toggleFAQ(this)">How do I file a case online?</h3>
+            <p>To file a case, navigate to the E-Filing section, upload your documents, and follow the guided process.</p>
+        </div>
+        <div class="faq">
+            <h3 onclick="toggleFAQ(this)">How can I contact a court representative?</h3>
+            <p>You can reach out through our support email or use the contact form below.</p>
+        </div>
+        <div class="faq">
+            <h3 onclick="toggleFAQ(this)">Is there live support available?</h3>
+            <p>Yes! You can use our live chat feature for instant assistance.</p>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Support</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="live-chat">
+            <h2>Need Immediate Help?</h2>
+            <a href="#">Start Live Chat</a>
+        </div>
+    </div>
+    <script>
+        function toggleFAQ(element) {
+            var content = element.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
